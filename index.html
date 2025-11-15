@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dgland.com</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <!--header-->
+    <div class="header">
+      <img src="./img/headerGif.gif.gif" alt="" />
+    </div>
+
+    <div class="header-container">
+      <div class="imgLog">
+        <img src="./img/dgland logo.svg" alt="" />
+
+        <!--search-box-->
+        <div class="search-box">
+          <div class="icon">
+            <img src="./img/search-svgrepo-com.svg" alt="جستجو" />
+          </div>
+          <input type="text" placeholder="جستجو ..." />
+        </div>
+
+        <!--login-->
+        <div class="actions">
+          <!-- دکمه ورود -->
+          <div class="action-btn login-btn">
+            <img src="./img/login-svgrepo-com.svg" alt="ورود" />
+            <span>ورود | ثبت‌نام</span>
+          </div>
+
+          <!-- modal -->
+          <div class="modal" id="modal">
+            <div class="modal-content">
+              <button class="close" id="closeBtn">&times;</button>
+              <h3>ورود یا ثبت نام</h3>
+              <p>لطفا برای ادامه شماره همراه خود را وارد نمایید</p>
+              <input id="phoneInput" type="tel" placeholder="شماره همراه" />
+              <button id="submitBtn">ادامه</button>
+              <small>ورود شما به معنای پذیرش شرایط است.</small>
+            </div>
+          </div>
+
+          <!-- دکمه سبد خرید -->
+          <div class="action-btn cart-btn">
+            <img src="./img/shopping-cart-svgrepo-com(1).svg" alt="سبد خرید" />
+          </div>
+        </div>
+      </div>
+
+      <!--top-btn-->
+      <div class="top-btn">کارکرده</div>
+
+      <!-- menu-->
+      <nav class="nav-bar">
+        <ul class="main-menu">
+          <li class="has-mega-menu">
+            <div class="menu-wrapper">
+              <span class="menu-toggle"> دسته بندی کالاها </span>
+
+              <div class="mega-menu">
+                <div class="categories-list">
+                  <div class="active" data-target="mobile">
+                    <img src="img/موبایل.png" alt="موبایل" /> موبایل
+                  </div>
+                  <div data-target="accessory">
+                    <img src="img/جانبی.png" alt="جانبی" /> لوازم جانبی موبایل
+                  </div>
+                  <div data-target="headphone">
+                    <img src="img/هدفون.png" alt="هدفون" /> هدفون و هندزفری
+                  </div>
+                  <div data-target="laptop">
+                    <img src="img/lap.png" alt="لپتاپ" /> لپتاپ و تبلت
+                  </div>
+                  <div data-target="computer">
+                    <img src="img/کامپیوتر.png" alt="کامپیوتر" /> کامپیوتر
+                  </div>
+                  <div data-target="watch">
+                    <img src="img/ساعت.png" alt="ساعت" /> ساعت هوشمند
+                  </div>
+                  <div data-target="gaming">
+                    <img src="img/گیمینگ.png" alt="گیمینگ" /> گیمینگ
+                  </div>
+                  <div data-target="audio">
+                    <img src="img/صوتی.png" alt="صوتی" /> صوتی و تصویری
+                  </div>
+                  <div data-target="storage">
+                    <img src="img/نجهیزات.png" alt="ذخیره سازی" /> تجهیزات ذخیره
+                    سازی
+                  </div>
+                </div>
+
+                <div class="submenu-panels">
+                  <div class="submenu-panel active" id="mobile">
+                    <div class="submenu-column">
+                      <p class="title">موبایل بر اساس برند</p>
+                      <p class="item">آیفون</p>
+                      <p class="item">شیائومی</p>
+                      <p class="item">نوکیا</p>
+                      <p class="item">موبایل نوکیا</p>
+                      <p class="item">موبایل هوآوی</p>
+                      <p class="item">موبایل ابو</p>
+                      <p class="item">موبایل آنر</p>
+                      <p class="item">موبایل ناتینگ مون</p>
+                      <p class="item">موبایل موتورولا</p>
+                      <p class="item">موبایل ریلمی</p>
+                      <p class="item">موبایل جی ال ایکس</p>
+                      <p class="item">موبایل اوتل</p>
+                    </div>
+                    <div class="submenu-column">
+                      <p class="title">موبایل بر اساس کاربرد</p>
+                      <p class="item">ساده</p>
+                      <p class="item">گیمینگ</p>
+                      <p class="item">عکاسی</p>
+                      <p class="item">پرچمدار</p>
+                      <p class="item">ضد آب</p>
+                    </div>
+                    <div class="submenu-column">
+                      <p class="title">موبایل بر اساس قیمت</p>
+                      <p class="item">تا ۲ میلیون تومان</p>
+                      <p class="item">تا ۵ میلیون تومان</p>
+                      <p class="item">تا ۱۰ میلیون تومان</p>
+                      <p class="item">تا ۱۵ میلیون تومان</p>
+                      <p class="item">تا ۲۵ میلیون تومان</p>
+                      <p class="item">تا ۴۰ میلیون تومان</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!--other menu-->
+          <li
+            style="
+              background-image: url(./img/purchase-svgrepo-com.svg);
+              background-repeat: no-repeat;
+              background-position: right;
+              background-size: 25px;
+              padding-right: 15px;
+            "
+          >
+            <a href="#">خرید اقساطی</a>
+          </li>
+          <li
+            style="
+              background-image: url(./img/magazine-book-reading-svgrepo-com.svg);
+              background-repeat: no-repeat;
+              background-position: right;
+              background-size: 30px;
+              margin-right: 5px;
+              padding-right: 15px;
+            "
+          >
+            <a href="#">مجله دی‌جی‌لند</a>
+          </li>
+          <li
+            style="
+              background-image: url(./img/percentage-discount-svgrepo-com.svg);
+              background-repeat: no-repeat;
+              background-position: right;
+              background-size: 25px;
+              margin-right: 5px;
+              padding-right: 15px;
+            "
+          >
+            <a href="#">پیشنهاد طلایی</a>
+          </li>
+          <li
+            style="
+              background-image: url(./img/location-1-svgrepo-com.svg);
+              background-repeat: no-repeat;
+              background-position: right;
+              background-size: 20px;
+              margin-right: 5px;
+              padding-right: 10px;
+            "
+          >
+            <a href="#">شعب دی‌جی‌لند</a>
+          </li>
+          <li
+            style="
+              background-image: url(./img/umbrella-svgrepo-com.svg);
+              background-repeat: no-repeat;
+              background-position: right;
+              background-size: 23px;
+              margin-right: 5px;
+              padding-right: 10px;
+            "
+          >
+            <a href="#">خرید بیمه موبایل</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Slideshow -->
+
+    <div class="slideshow-container">
+      <div class="mySlides active">
+        <img src="./img/slide1.webp" alt="عکس 1" />
+      </div>
+      <div class="mySlides">
+        <img src="./img/slide2.webp" alt="عکس 2" />
+      </div>
+      <div class="mySlides">
+        <img src="./img/slide3.jpg" alt="عکس 3" />
+      </div>
+      <div class="mySlides">
+        <img src="./img/slide4.webp" alt="عکس 4" />
+      </div>
+
+      <div class="dots">
+        <span class="dot active-dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+
+    <!-- Most visited categories -->
+
+    <p style="margin-top: 20px; text-align: center; font-size: 22px">
+      دسته بندی های <span class="red-underline">پر بازدید</span>
+    </p>
+    <div class="circle-container">
+      <div class="circle-item">
+        <div class="circle"><img src="./img/mobile.jpeg" alt="" /></div>
+        <p class="caption">گوشی موبایل</p>
+      </div>
+      <div class="circle-item">
+        <div class="circle"><img src="./img/lap.jpeg" alt="" /></div>
+        <p class="caption">لپتاپ</p>
+      </div>
+      <div class="circle-item">
+        <div class="circle"><img src="./img/headphone.jpeg" alt="" /></div>
+        <p class="caption">هدفون و هندزفری</p>
+      </div>
+      <div class="circle-item">
+        <div class="circle"><img src="./img/spoker.jpeg" alt="" /></div>
+        <p class="caption">اسپیکر و بلندگو</p>
+      </div>
+      <div class="circle-item">
+        <div class="circle"><img src="./img/saat.jpeg" alt="" /></div>
+        <p class="caption">ساعت هوشمند</p>
+      </div>
+      <div class="circle-item">
+        <div class="circle"><img src="./img/tajhizat.jpeg" alt="" /></div>
+        <p class="caption">تجهیزات ذخیره سازی</p>
+      </div>
+      <div class="circle-item">
+        <div class="circle"><img src="./img/pawer.jpeg" alt="" /></div>
+        <p class="caption">شارژر و پاوربانک</p>
+      </div>
+    </div>
+
+    <!-- Two slides -->
+    <div class="container">
+      <div class="image-box">
+        <img src="./img/red.jpeg" alt="عکس اول" />
+      </div>
+      <div class="image-box">
+        <img src="./img/blue.jpeg" alt="عکس دوم" />
+      </div>
+    </div>
+
+    <!-- Red Background Sections -->
+    <div class="title">
+      <div>
+        <img
+          src="./img/big_white_golden_offer.svg"
+          alt=""
+          style="margin-right: 570px"
+        />
+      </div>
+      <p style="margin-right: 20">تخفیف تایم</p>
+    </div>
+
+    <!-- Red Section Slider -->
+    <div class="red-section">
+      <div class="slider-wrapper-sl">
+        <a href="#p1" class="nav-btn nav-left">
+          <img
+            src="../dgland/img/arrow-sm-left-svgrepo-com.svg"
+            alt=""
+            style="height: 16px"
+          />
+        </a>
+        <div class="slider-container-sc">
+          <div class="product-card" id="p1">
+            <img src="./img/۱.jpeg" alt="" />
+            <div class="product-name">
+              هدفون بلوتوثی سامسونگ مدل Galaxy Buds 3
+            </div>
+            <div class="old-price">۶,۷۹۹,۰۰۰ تومان</div>
+            <div class="new-price">۵,۸۹۹,۰۰۰ تومان</div>
+            <div class="discount-badge">٪۱۴</div>
+          </div>
+
+          <div class="product-card" id="p2">
+            <img src="./img/۲.gif" alt="" />
+            <div class="product-name">
+              هدفون بلوتوثی اپل مدل AirPods Pro (نسل ۲)
+            </div>
+            <div class="old-price">۱۸,۷۴۹,۰۰۰ تومان</div>
+            <div class="new-price">۱۷,۷۴۹,۰۰۰ تومان</div>
+            <div class="discount-badge">٪۵</div>
+          </div>
+
+          <div class="product-card" id="p3">
+            <img src="./img/۳.jpeg" alt="" />
+            <div class="product-name">
+              ساعت هوشمند اپل مدل Apple Watch SE (2024)
+            </div>
+            <div class="old-price">۱۹,۹۹۹,۰۰۰ تومان</div>
+            <div class="new-price">۱۹,۲۴۹,۰۰۰ تومان</div>
+            <div class="discount-badge">٪۱</div>
+          </div>
+
+          <div class="product-card" id="p4">
+            <img src="./img/۴.jpeg" alt="" />
+            <div class="product-name">
+              گوشی موبایل نوکیا مدل 3210 (2024) دو سیم کارت
+            </div>
+            <div class="old-price">۳,۲۹۹,۰۰۰ تومان</div>
+            <div class="new-price">۲,۹۲۹,۰۰۰ تومان</div>
+            <div class="discount-badge">٪۱۱</div>
+          </div>
+
+          <div class="product-card" id="p5">
+            <img src="./img/۵.jpeg" alt="" />
+            <div class="product-name">
+              مچ بند هوشمند شیائومی مدل Mi Band 9 - گلوبال
+            </div>
+            <div class="old-price">۲,۷۰۰,۰۰۰ تومان</div>
+            <div class="new-price">۲,۴۹۹,۰۰۰ تومان</div>
+            <div class="discount-badge">٪۷</div>
+          </div>
+
+          <div class="product-card" id="p6">
+            <img src="./img/karman.jpeg" alt="" />
+            <div class="product-name">
+              اسپیکر بلوتوثی قابل حمل هارمن کاردن مدل Onyx Studio 9
+            </div>
+            <div class="old-price">۲۱,۰۰۰,۰۰۰ تومان</div>
+            <div class="new-price">۱۹,۷۰۰,۰۰۰ تومان</div>
+            <div class="discount-badge">٪۷</div>
+          </div>
+
+          <div class="product-card" id="p7">
+            <img src="./img/شارژر.jpeg" alt="" />
+            <div class="product-name">
+              شارژر همراه شیائومی مدل Redmi PB100LZM ظرفیت 10000 میلی آمپر ساعت
+            </div>
+            <div class="old-price">۱,۰۱۰,۰۰۰ تومان</div>
+            <div class="new-price">۹۶,۰۰۰ تومان</div>
+            <div class="discount-badge">٪۷</div>
+          </div>
+        </div>
+        <a href="#p7" class="nav-btn nav-right">
+          <img
+            src="../dgland/img/arrow-sm-right-svgrepo-com.svg"
+            alt=""
+            style="height: 16px"
+          />
+        </a>
+      </div>
+    </div>
+
+    <!-- Mobile section -->
+    <p style="margin-top: 20px; text-align: center; font-size: 22px">
+      گوشی <span class="red-underline">موبایل</span>
+    </p>
+    <div class="pedar">
+      <div class="card-mobile">
+        <img src="./img/گوشی ۱.jpeg" alt="" />
+      </div>
+      <div class="card-mobile">
+        <img src="./img/گوشی ۲.jpeg" alt="" />
+      </div>
+      <div class="card-mobile">
+        <img src="./img/گوشی ۳.jpeg" alt="" />
+      </div>
+    </div>
+
+    <p class="text-with-lines">محبوب ترین موبایل ها</p>
+
+    <!-- Favorite brands -->
+    <div class="favorit">
+      <div class="card-container">
+        <div class="card" style="margin-top: 30px">
+          <div class="card-image">
+            <img src="./img/mobile1.jpeg" alt="محصول" />
+          </div>
+          <div class="card-text">
+            گوشی موبایل سامسونگ مدل Galaxy S24 FE 5G دوسیم کارت ظرفیت 256
+            گیگابایت رم 8 گیگابایت...
+          </div>
+          <div class="new-price">۴۱,۴۹۹,۰۰۰ تومان</div>
+        </div>
+
+        <div class="card" style="margin-top: 30px">
+          <div class="card-image">
+            <img src="./img/mobile2.jpeg" alt="محصول" />
+          </div>
+          <div class="card-text">
+            گوشی موبایل سامسونگ مدل Galaxy A06 4G دو سیم کارت ظرفیت 128 گیگابایت
+            و رم 4 گیگابایت
+          </div>
+          <div class="new-price">۸,۶۵۹,۰۰۰ تومان</div>
+        </div>
+
+        <div class="card" style="margin-top: 30px">
+          <div class="card-image">
+            <img src="./img/mob3.jpeg" alt="محصول" />
+          </div>
+          <div class="card-text">
+            گوشی موبايل سامسونگ مدل Galaxy A36 5G دو سیم کارت ظرفیت 256 گیگابایت
+            رم 8 گیگابایت - ویتنام
+          </div>
+          <div class="new-price">۲۶,۴۴۹,۰۰۰ تومان</div>
+        </div>
+
+        <div class="card" style="margin-top: 30px">
+          <div class="card-image">
+            <img src="./img/mob4.jpeg" alt="محصول" />
+          </div>
+          <div class="card-text">
+            گوشی موبایل سامسونگ مدل Galaxy A56 دو سیم کارت ظرفیت 128 گیگابایت و
+            رم 8 گیگابایت - ویتنام
+          </div>
+          <div class="new-price">۲۸,۷۶۹,۰۰۰ تومان</div>
+        </div>
+
+        <div class="card" style="margin-top: 30px">
+          <div class="card-image">
+            <img src="./img/mob4.jpeg" alt="محصول" />
+          </div>
+          <div class="card-text">
+            گوشی موبایل سامسونگ مدل Galaxy A56 دو سیم کارت ظرفیت 256 گیگابایت و
+            رم 8 گیگابایت - ویتنام
+          </div>
+          <div class="new-price">۳۳,۴۴۹,۰۰۰ تومان</div>
+        </div>
+      </div>
+    </div>
+    <p
+      class="text"
+      style="margin-top: 20px; text-align: center; font-size: 22px"
+    >
+      صوتی <span class="red-underline">و تصویری</span>
+    </p>
+    <div class="pedar">
+      <div class="card-mobile">
+        <img src="./img/headphone2.jpeg" alt="" />
+      </div>
+      <div class="card-mobile">
+        <img src="./img/handsfree.jpeg" alt="" />
+      </div>
+      <div class="card-mobile">
+        <img src="./img/haml.jpeg" alt="" />
+      </div>
+    </div>
+
+    <!-- Image -->
+    <div class="moshaver-kharid">
+      <img src="./img/moshaver-kharid.png" alt="" />
+    </div>
+
+    <p
+      class="text"
+      style="margin-top: 50px; text-align: center; font-size: 23px"
+    >
+      کامپیوتر <span class="red-underline">و</span> لپ تاپ
+    </p>
+
+    <!--cumputer & lap-->
+    <div class="pedar">
+      <div class="card-mobile">
+        <img src="./img/lap1.jpeg" alt="" />
+      </div>
+      <div class="card-mobile">
+        <img src="./img/lap2.jpeg" alt="" />
+      </div>
+      <div class="card-mobile">
+        <img src="./img/lap3.jpeg" alt="" />
+      </div>
+    </div>
+    <p class="text-with-lines">محبوب ترین های لوازم جانبی</p>
+    <!--Slider-->
+    <div class="slider">
+      <div class="slider-wrapper-sl">
+        <a href="#slider1-p1" class="nav-btn nav-left">
+          <img
+            src="../dgland/img/arrow-sm-left-svgrepo-com.svg"
+            alt=""
+            style="height: 16px"
+          />
+        </a>
+        <div class="slider-container-sc">
+          <div class="product-card" id="slider1-p1">
+            <img src="./img/hard.gif" alt="" />
+            <div class="product-name">
+              هارد اکسترنال ای دیتا مدل HD770G ظرفیت 2 ترابایت
+            </div>
+            <div class="new-price">۹,۴۹۹,۹۹۹ تومان</div>
+          </div>
+          <div class="product-card" id="slider1-p2">
+            <img src="./img/spiker.jpeg" alt="" />
+            <div class="product-name">
+              اسپیکر بلوتوثی قابل حمل جی بی ال مدل PARTY BOX 710
+            </div>
+            <div class="old-price">۵۳,۸۹۹,۰۰۰ تومان</div>
+            <div class="new-price">۵۲,۸۹۹,۰۰۰ تومان</div>
+            <div class="discount-badge">٪۲</div>
+          </div>
+
+          <div class="product-card" id="slider1-p3">
+            <img src="./img/saat.gif" alt="" />
+            <div class="product-name">
+              ساعت هوشمند سامسونگ مدل Galaxy Watch 6 Classic 43mm
+            </div>
+            <div class="old-price">۱۴,۴۴۹,۰۰۰ تومان</div>
+            <div class="new-price">۱۳,۴۴۹,۰۰۰ تومان</div>
+            <div class="discount-badge">٪۷</div>
+          </div>
+          <div class="product-card" id="slider1-p4">
+            <img src="./img/haard.jpeg" alt="" />
+            <div class="product-name">
+              هارد اکسترنال ای دیتا مدل HD710 Pro ظرفیت 1 ترابایت
+            </div>
+            <div class="old-price">۶,۰۸۰,۰۰۰ تومان</div>
+            <div class="new-price">۵,۵۴۹,۰۰۰ تومان</div>
+            <div class="discount-badge">٪۹</div>
+          </div>
+          <div class="product-card" id="slider1-p5">
+            <img src="./img/sharger.jpeg" alt="" />
+            <div class="product-name">شارژر اپل مدل 20 وات</div>
+            <div class="old-price">۱,۶۹۰,۰۰۰ تومان</div>
+            <div class="new-price">۱,۵۴۰,۰۰۰ تومان</div>
+            <div class="discount-badge">٪۹</div>
+          </div>
+          <div class="product-card" id="slider1-p6">
+            <img src="./img/bazi.gif" alt="" />
+            <div class="product-name">
+              کنسول بازی سونی مدل Playstation 5 Slim Drive ظرفیت 1 ترابایت
+              (اروپا)
+            </div>
+            <div class="old-price">۵۱,۳۸۹,۰۰۰ تومان</div>
+            <div class="new-price">۵,۳۸۹,۰۰۰ تومان</div>
+            <div class="discount-badge">٪۲</div>
+          </div>
+          <div class="product-card" id="slider1-p7">
+            <img src="./img/flashh.jpeg" alt="" />
+            <div class="product-name">
+              فلش مموری ریمکس مدل RX-817 ظرفیت 256 گیگابایت
+            </div>
+            <div class="old-price">۲,۰۹۰,۰۰۰ تومان</div>
+            <div class="new-price">۱,۸۹۰,۰۰۰ تومان</div>
+            <div class="discount-badge">٪۱۰</div>
+          </div>
+        </div>
+
+        <a href="#slider1-p7" class="nav-btn nav-right">
+          <img
+            src="../dgland/img/arrow-sm-right-svgrepo-com.svg"
+            alt=""
+            style="height: 16px"
+          />
+        </a>
+      </div>
+    </div>
+    <!--porforosh-->
+    <div class="porforosh">
+      <img src="./img/dgland-forosh.png" alt="" />
+      <div class="black-row" style="margin-top: 5px">
+        <div class="card-container">
+          <div class="card">
+            <div class="card-dot"></div>
+            <div class="card-image">
+              <img src="./img/l1.jpeg" alt="محصول" />
+            </div>
+            <div class="card-text">
+              گوشی موبایل سامسونگ مدل Galaxy A05s 4G دو سیم کارت ظرفیت 64
+              گیگابایت...
+            </div>
+            <div class="new-price">۹,۶۹۳,۰۰۰ تومان</div>
+          </div>
+          <div class="card">
+            <div class="card-dot"></div>
+            <div class="card-image">
+              <img src="./img/l2.jpeg" alt="محصول" />
+            </div>
+            <div class="card-text">شارژر اپل مدل 20 وات</div>
+            <div class="old-price-2">۱,۶۹۰,۰۰۰ تومان</div>
+            <div class="new-price">۱,۵۶۹,۰۰۰ تومان</div>
+            <div class="discount-badge">٪۷</div>
+          </div>
+          <div class="card">
+            <div class="card-dot"></div>
+            <div class="card-image">
+              <img src="./img/flash.gif" alt="محصول" />
+            </div>
+            <div class="card-text">
+              فلش مموری ای دیتا مدل UR340 ظرفیت 64 گیگابایت
+            </div>
+            <div class="old-price-2">۶۰۰,۰۰۰ تومان</div>
+            <div class="new-price">۵۰۰,۰۰۰ تومان</div>
+            <div class="discount-badge">٪۱۷</div>
+          </div>
+          <div class="card">
+            <div class="card-dot"></div>
+            <div class="card-image">
+              <img src="./img/l4.gif" alt="محصول" />
+            </div>
+            <div class="card-text">هدفون بلوتوثی انکر مدل R50i A3949</div>
+            <div class="old-price-2">۱,۲۴۹,۰۰۰ تومان</div>
+            <div class="new-price">۱,۱۴۹,۰۰۰ تومان</div>
+            <div class="discount-badge">٪۸</div>
+          </div>
+          <div class="card">
+            <div class="card-dot"></div>
+            <div class="card-image">
+              <img src="./img/l5.gif" alt="محصول" />
+            </div>
+            <div class="card-text">
+              فلش مموری ای دیتا مدل DashDrive UV150 ظرفیت 64 گیگابایت
+            </div>
+            <div class="old-price-2">۴۱۰,۰۰۰ تومان</div>
+            <div class="new-price">۳۵۰,۰۰۰ تومان</div>
+            <div class="discount-badge">٪۱۵</div>
+          </div>
+        </div>
+        <button>مشاهده همه</button>
+      </div>
+      <div class="black-row" style="margin-top: 20px"></div>
+      <div class="black-row" style="margin-top: 20px"></div>
+      <div class="black-row" style="margin-top: 20px"></div>
+    </div>
+
+    <!--bartar-->
+    <p class="bartar">برندهای برتر</p>
+
+    <!--marquee text-->
+    <div class="marquee">
+      <div class="marquee-content">
+        <span>SAMSUNG</span>
+        <span>XlaOMI</span>
+        <span>NOKIA</span>
+        <span>JBL</span>
+        <span>APPLE</span>
+        <span>ANKER</span>
+        <span>SANDISK</span>
+        <span>PROMATE</span>
+        <span>SONY</span>
+        <span>harman kardon</span>
+      </div>
+    </div>
+
+    <!--Text Box-->
+    <div class="text-box" id="textBox">
+      <div class="text-content" id="textContent">
+        <h5>خرید گوشی</h5>
+        خرید گوشی و خرید اینترنتی گوشی در این روزها، می‌تواند زمان زیادی از شما
+        بگیرد. در هنگام <a href="">خرید گوشی موبایل</a> باید به نکات متعددی
+        مانند خرید گوشی موبایل، امکانات گوشی موبایل، ضمانت گوشی موبایل و رجیستری
+        گوشی موبایل در کنار اصالت فروشگاه موبایل دقت کرد. مهم‌‎ترین عامل اثرگذار
+        در تصمیم گیری ما، قیمت روز گوشی موبایل می‌باشد. شما می‌توانید از طریق
+        خرید اینترنتی گوشی از فروشگاه اینترنتی موبایل یا خرید حضوری از شعب
+        دی‌جی‌لند اقدام به خرید گوشی سامسونگ، خرید گوشی شیائومی و سایر برندها
+        کنید
+        <h5>فروشگاه اینترنتی موبایل</h5>
+        خرید گوشی موبایل از فروشگاه اینترنتی موبایل، یکی از سریع‌ترین راه‌ها به
+        شمار می‌آید. در زمان خرید اینترنتی گوشی موبایل، باید به نکاتی مانند نشان
+        نماد الکترونیکی، پروتکل SSL و درگاه امن پرداخت فروشگاه اینترنتی توجه
+        کنید. قبل از خرید موبایل، نظرات کاربران را بررسی کنید. این نظرات
+        می‌تواند به شما درک بهتری از تجربه خرید دیگران و کیفیت سرویس‌دهی آن
+        فروشگاه اینترنتی بدهد. مورد بعدی که می‌بایست به آن دقت شود اصالت کالای
+        دیجیتال است.
+        <h5>خرید اقساطی گوشی</h5>
+        این‌ روزها خرید اقساطی گوشی به دلیل نوسان قیمت گوشی موبایل بهترین راه
+        خرید گوشی محسوب می‌شود. دی‌جی‌لند با فراهم کردن امکان خرید قسطی گوشی
+        موبایل، خرید قسطی لپ تاپ و سایر کالاهای دیجیتال، شرایطی آسان را برای
+        خرید جدیدترین محصولات دیجیتال فراهم کرده است. شما می‌توانید به دو روش
+        حضوری و آنلاین گوشی مورد نظر خود را به صورت قسطی خریداری نمایید. در روش
+        آنلاین کافیست به صفحه ویژه
+        <a href="">خرید قسطی کالای دیجیتال</a> دی‌جی‌لند و برای خرید حضوری گوشی
+        موبایل کافیست به یکی از شعب دی‌جی‌لند مراجعه کنید تا خرید خود را در
+        سریعترین زمان ممکن و با شرایطی آسان انجام دهید.
+        <h5>خرید گوشی سامسونگ</h5>
+        <a href="">خرید گوشی سامسونگ</a> همیشه یکی از انتخاب‌های اول خریداران
+        موبایل در ایران است...
+      </div>
+      <button class="toggle-btn" onclick="toggleText()">مشاهده بیشتر</button>
+    </div>
+
+    <footer>
+      <!-- درباره دی‌جی‌لند -->
+      <div class="footer-col">
+        <h4>درباره دی‌جی‌لند</h4>
+        <ul>
+          <li>تماس با ما</li>
+          <li>درباره ما</li>
+          <li>مجله دیجی‌لند</li>
+          <li>شعبه</li>
+          <li>شرایط و قوانین</li>
+          <li>خرید اقساطی</li>
+          <li>فرصت‌های شغلی</li>
+        </ul>
+      </div>
+
+      <!-- خدمات مشتریان -->
+      <div class="footer-col">
+        <h4>خدمات مشتریان</h4>
+        <ul>
+          <li>پرسش‌های متداول</li>
+          <li>راهنمای خرید</li>
+          <li>شرایط بازگشت کالا</li>
+          <li>ثبت شکایت</li>
+          <li>حریم خصوصی</li>
+        </ul>
+      </div>
+
+      <!-- دسته‌بندی‌ها -->
+      <div class="footer-col">
+        <h4>دسته‌بندی‌های پربازدید</h4>
+        <ul>
+          <li>گوشی موبایل</li>
+          <li>لپ‌تاپ</li>
+          <li>هدفون و هندزفری</li>
+          <li>اسپیکر و رادیو</li>
+          <li>ساعت هوشمند</li>
+          <li>تجهیزات ذخیره سازی</li>
+          <li>شارژر و پاوربانک</li>
+        </ul>
+      </div>
+
+      <!-- اطلاعات تماس + شبکه اجتماعی -->
+      <div class="footer-col social-section">
+        <h4>ما را دنبال کنید</h4>
+        <div class="social-icons">
+          <img
+            src="../dgland/img/instagram-1-svgrepo-com(1).svg"
+            alt="Instagram"
+          />
+          <img src="../dgland/img/telegram-svgrepo-com.svg" alt="Telegram" />
+          <img
+            src="../dgland/img/linkedin-rounded-svgrepo-com.svg"
+            alt="LinkedIn"
+          />
+          <img src="../dgland/img/aparat-svgrepo-com.svg" alt="Aparat" />
+        </div>
+
+        <div class="contact-info">
+          <h4 style="margin-top: 25px">ساعت پاسخگویی</h4>
+          <p>شنبه تا چهارشنبه ۹ الی ۱۷ و پنج‌شنبه‌ها ۹ الی ۱۳</p>
+          <p><span class="icon"></span> تلفن امور مشتریان: 021-42105</p>
+          <p><span class="icon"></span> روابط عمومی: info@dgland.com</p>
+        </div>
+      </div>
+
+      <!-- توضیح پایین -->
+      <div class="footer-bottom">فروشگاه اینترنتی <span>دی‌جی‌لند</span></div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
